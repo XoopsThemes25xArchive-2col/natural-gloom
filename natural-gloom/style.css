@@ -1,0 +1,346 @@
+
+@import url(layout.css);
+@import url(blocks.css);
+@import url(content.css);
+@import url(style.css);
+
+
+/* ------ General styles ------ */
+
+html, body {
+	background: #797E84 url('images/body.jpg');
+	color: #444;
+	font: normal 80% sans-serif;
+	line-height: 1.5;
+	padding: 0;
+	margin: 0;
+}
+
+table {
+	width: 100%;
+}
+
+table td {
+	padding: 0;
+	border-width: 0;
+	vertical-align: top;
+}
+
+a:focus,a:hover {color: #000;}
+a {
+	color: #357;
+	text-decoration: underline;
+}
+
+abbr, acronym {border-bottom: 1px dotted #666;}
+address {margin-bottom: 1.5em;}
+blockquote {margin: 1.5em;}
+del, blockquote {color: #666;}
+em, dfn, blockquote, address {font-style: italic;}
+strong, dfn {font-weight: bold;}
+sup, sub {line-height: 0;}
+
+pre {
+	margin: 1.5em 0;
+	white-space: pre;
+}
+pre,code,tt {
+	font: 1em;
+	line-height: 1.5;
+}
+/* Headings */
+
+h1,h2,h3,h4,h5,h6 {
+	color: #555;
+	font-weight: normal;
+	line-height: 1;
+	margin-bottom: 0.3em;
+}
+h4,h5,h6 {font-weight: bold;}
+
+h1 {font-size: 2.6em;}
+h2 {font-size: 2em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.25em;}
+h5 {font-size: 1.1em;}
+h6 {font-size: 1em;}
+
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin: 0;}
+
+/* Lists */
+
+li ul, li ol {margin-left: 1.5em;}
+ul, ol {margin: 0 1.5em 1.5em 1.5em;}
+
+ul {list-style-type: disc;}
+ol {list-style-type: decimal;}
+
+dl {margin: 0 0 1.5em 0;}
+dl dt {font-weight: bold;}
+dd {margin-left: 1.5em;}
+
+ul.tabbed {
+	display: inline;
+	margin: 0;
+}
+ul.tabbed li {
+	float: left;
+	list-style: none;
+	margin: 0;
+}
+
+/* 
+   Forms 
+------------------------------------------------------------------- */
+
+label {
+	cursor: pointer;
+	font-weight: bold;
+}
+fieldset {border: 1px solid #CCC;}
+legend {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+/*textarea {overflow: auto;}*/
+input.text, textarea, select {
+	background: #FCFCFC;
+	border: 1px inset #AAA;
+	padding: 4px 5px;
+}
+input.text:focus, textarea:focus, select:focus {background: #FFFFF5;}
+
+input.button {
+	background: #F9F9F3;
+	border: 1px outset #AAA;
+	padding: 4px 5px;
+}
+input.button:active {border-style: inset;}
+
+
+.form_row {
+	background: #F5F5F5;
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #E1E1E1;
+	padding: 10px 0;
+}
+.form_required {font-weight: bold;}
+.form_row_submit, .legend {
+	background: #E5E5E5;
+	border-bottom: 1px solid #CCC;
+	border-top: 1px solid #FAFAFA;
+	padding: 4px 0 8px;
+}
+.legend {
+	border-bottom: 1px solid #CCC;
+	padding: 8px 18px 6px;
+	font-size: 1.4em;
+}
+.form_property, .form_value {float: left;}
+.form_property {
+	text-align: right;
+	width: 110px;
+}
+.form_value {padding-left: 24px;}
+.form_row_submit .form_value {padding-left: 132px;}
+
+
+/* General wrappers */
+
+#layout_wrapper {
+	background: url('images/layout_wrapper.jpg') repeat-x;
+	padding-bottom: 16px;
+}
+#layout_wrapper2 {
+	background: url('images/layout_wrapper2.jpg') no-repeat center top;
+	padding-top: 90px;
+}
+#layout_wrapper3 {
+	background: #FFF;
+	margin: 0 auto;
+	width: 992px;	
+}
+#layout_wrapper4 {padding: 6px;}
+
+
+/* Header */
+
+#header_wrapper {
+	background: #222 url('images/header.jpg') repeat-x;
+	height: 150px;
+}
+#header {padding: 48px 48px 0 48px;}
+
+#site_title h1 {
+	color: #A0C3D0;
+	font-size: 2.5em;
+}
+#site_title h1 a {
+	color: #A0C3D0;
+	text-decoration: none;
+}
+#site_title h1 a:hover {color: #DDD;}
+#site_title h2 {
+	color: #999;
+	font-size: 1.3em;
+}
+
+
+
+/* Navigation */
+
+#navigation {
+	background: #6E7D85 url('images/navigation.gif') repeat-x;
+	margin-bottom: 3px;
+	padding-top: 4px;
+}
+#navigation a {
+	color: #E0E6EA;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+}
+#navigation a:hover {color: #F0F6FA;}
+
+/* Main navigation */
+#nav li {border-right: 1px solid #54646C;}
+#nav a {
+	font-size: 1.3em;
+	padding: 10px 16px;
+}
+#nav a:hover {background: #5E6D75;}
+
+/* Sub-navigation */
+#subnav {
+	border-top: 1px solid #555A5F;
+	background: #60656A;
+}
+#subnav li {border-right: 1px solid #50555A;}
+#subnav a {
+	font-size: 1.1em;
+	padding: 9px 12px;
+}
+#subnav a:hover {background: #555A5F;}
+
+
+
+/* ---------- Column left/right rules ---------- */
+
+#xo-canvas-rightcolumn {}
+#xo-canvas-rightcolumn a {}
+#xo-canvas-rightcolumn a:hover {}
+
+#xo-canvas-leftcolumn {}
+#xo-canvas-leftcolumn a {}
+#xo-canvas-leftcolumn a:hover {}
+
+/* ------ Main content ------ */
+
+#xo-canvas-content {	
+}
+
+
+
+/* ----------Page [center column] rules ---------- */
+
+#xo-page {
+	float:			left;
+	width:			690px;
+	padding:0;
+}
+
+/* ---------- Module display rules ---------- */
+
+#xo-content {
+	padding: 0 20px;
+}
+
+/* ---------- Redirect ------------ */
+#xo-redirect {
+	margin: 40px 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	background-color: #f7e6bd;
+	color: #222;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	border: 2px solid #DDDDFF;
+}
+/* ---------- Site close ------------ */
+#xo-siteclose-login {
+	width: 270px;
+	margin-left: auto;
+	margin-right: auto; 	
+	border:1px solid #DDDDFF;	
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+#xo-siteclose-login h2 {
+	background-color: #f3ac03;
+	font-weight: bold;
+	font-size: 1em; 
+	color: white;
+	padding: 2px;	
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;	
+}
+#xo-siteclose-login form {
+	padding: 0px;
+	margin: 0px;	
+}
+#xo-siteclose-login div{
+	padding: 6px;
+}
+#xo-siteclose-login span.left {
+	float: left;
+	padding-bottom: 3px;
+}
+#xo-siteclose-login span.right {
+	float: right;
+	padding-right: 3px;
+	padding-bottom: 3px;
+}
+#xo-siteclose-login div.button {
+	text-align: right;
+	clear: both;	
+	padding-right: 0px;
+}
+
+/* Footer */
+
+#footer {	
+	background: #DDD;
+	border: 1px solid #CCC;
+	padding: 8px 12px;
+}
+#footer .right, #footer .right a {
+	color: #777;
+	text-decoration: none;
+}
+#footer .right a:hover {
+	color: #223;
+	text-decoration: underline;
+}
+
+
+/* ----------  mode debug  ---------- */
+
+#xo-logger-output {
+	font-size:			80%;
+}
+
+/* Floats */   
+
+.left,.alignleft {float: left;}
+.right,.alignright {float: right;}
+
+.clear,.clearer {clear: both;}
+.clearer {
+	display: block;
+	font-size: 0;
+	line-height: 0;	
+}

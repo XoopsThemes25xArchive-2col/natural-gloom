@@ -1,0 +1,106 @@
+/* ---------- Canvas rules ---------- */
+
+#xo-canvas {
+	background: url('images/main_wrapper.gif') repeat-y;
+	border-bottom: 1px solid #C3C4C1;
+	margin-bottom: 3px;
+}
+
+*html #xo-canvas {
+	margin: -5px auto 10px auto;	
+}
+
+#main-xo-canvas {
+	background: url('images/main.gif') no-repeat;
+	padding: 24px 0;
+}
+
+#xo-canvas-columns {
+	margin:	0px;
+	padding:0px;
+}
+
+#xo-canvas-leftcolumn {
+	float: left;
+	width: 290px; /*198px*/
+	margin:0px;
+	background:transparent;
+}
+
+*html #xo-canvas-leftcolumn{ /*IE6*/
+	margin-top: -3px;
+	}
+
+#xo-canvas-rightcolumn {
+	float: right;
+	width: 290px; /*198px*/
+	margin:0px;
+	background: transparent;
+}
+
+*html #xo-canvas-rightcolumn{ /*IE6*/
+	margin-top: -4px;
+	margin-left: -288px;
+	}
+
+*+html #xo-canvas-rightcolumn{ /*IE7*/
+	margin-left: -288px;
+	}
+
+/* ----------Canvas rules (when columns are visible) ---------- */
+
+#xo-canvas.leftcolumn-layout #xo-canvas-columns, #xo-canvas.threecolumns-layout #xo-canvas-columns { padding-left: 0px;}
+#xo-canvas.rightcolumn-layout #xo-canvas-columns, #xo-canvas.threecolumns-layout #xo-canvas-columns {	padding-right: 0px; }
+
+/*only left colum and the content*/
+#xo-canvas.leftcolumn-layout #xo-page{width: 80%}
+/*only right column and the content*/
+#xo-canvas.rightcolumn-layout #xo-page{width: 80%}
+/*if right and the left blocks are NOT visible*/
+#xo-canvas.nocolumn-layout #xo-page{width: 100%}
+
+
+/* ------- Top and bottom zones (2 columns) ------- */
+
+#xo-page-topleftblocks, #xo-page-bottomleftblocks {
+	float:	left;
+	width:	48%;
+	min-width: 48%;
+	margin: 2px;
+	padding: 0px;
+}
+#xo-page-toprightblocks, #xo-page-bottomrightblocks {
+	float:	right;
+	width:	48%;
+	min-width: 48%;
+	margin: 2px;
+	padding: 0px;
+}
+
+*html #xo-page-topleftblocks, *html #xo-page-bottomleftblocks,
+*html #xo-page-toprightblocks, *html #xo-page-bottomrightblocks
+{
+	width:	48% !important;
+
+}
+
+#xo-page-topcenterblocks, #xo-page-bottomcenterblocks {
+	clear:			both;
+	margin-left:	1%;
+	margin-right:	0;
+}
+/* ------- Top and bottom zones (3 columns) ------- */
+
+#xo-page-topblocks.xo-lcrpageblocks .xo-blockszone, #xo-page-bottomblocks.xo-lcrpageblocks .xo-blockszone {
+	float:			left;
+	clear:			none;
+	width:			31.2%;
+}
+
+* html #xo-page-topblocks.xo-lcrpageblocks .xo-blockszone,
+* html #xo-page-bottomblocks.xo-lcrpageblocks .xo-blockszone {
+	width:			30.6%;
+}
+
+#xo-page-topblocks.xo-lcrpageblocks #xo-page-topleftblocks {}
+

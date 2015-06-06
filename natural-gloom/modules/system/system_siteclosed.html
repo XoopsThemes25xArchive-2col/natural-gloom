@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<{$xoops_langcode}>" xml:lang="<{$xoops_langcode}>">
+<head>
+<!-- Center block custom positioning -->
+	<{* Center blocks display order
+		valid values are:  lrc (left right / center) lcr (left center right) clr (center / left right)
+	*}>
+	<{assign var=theme_top_order value=lrc}>
+	<{assign var=theme_bottom_order value=lcr}>
+	
+<!-- Theme name -->
+	<{assign var=theme_name value=$xoTheme->folderName}>
+
+<!-- Title and meta -->
+	<title><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> : <{/if}><{$xoops_sitename}></title>
+	<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />	
+	<meta name="robots" content="<{$xoops_meta_robots}>" />
+	<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+	<meta name="description" content="<{$xoops_meta_description}>" />
+	<meta name="rating" content="<{$xoops_meta_rating}>" />
+	<meta name="author" content="<{$xoops_meta_author}>" />
+	<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+	<meta name="generator" content="ImpressCMS" />
+    <meta http-equiv="Refresh" content="<{$time}>; url=<{$url}>" />
+	
+<!-- Favicon -->
+	<link rel="shortcut icon" type="image/ico" href="<{xoImgUrl icons/favicon.ico}>" />
+	<link rel="icon" type="image/png" href="<{xoImgUrl icons/icon.png}>" />
+	
+<!-- Sheet Css -->
+	<link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoAppUrl xoops.css}>" />
+	<link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl style.css}>" />
+	<link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl layout.css}>" />
+    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl style.css}>" />
+    
+    <!-- Module Header -->
+    <{$xoops_module_header}>
+   
+</head>
+
+<body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
+
+
+<!-- Starting theme -->
+
+<div id="layout_wrapper">
+<div id="layout_wrapper2">
+<div id="layout_wrapper3">
+<div id="layout_wrapper4">
+
+<!-- HEADER -->
+<div id="header_wrapper">
+		<div id="header">
+		
+			<div id="site_title">
+				<h1><a href="<{xoAppUrl}>"><{$xoops_sitename}></a></h1>
+				<h2><{$xoops_slogan}></h2>
+			</div>
+
+		</div>
+</div>
+<center>
+<br />
+<div style="width: 85%;background-color: #f7e6bd; color: #222222; text-align: center; border-top: 1px solid #DDDDFF; border-left: 1px solid #DDDDFF; border-right: 1px solid #DDDDFF; border-bottom: 1px solid #DDDDFF; font-weight: bold; padding: 10px;"><{$lang_siteclosemsg}>
+</div>
+<br />
+  <br />
+  <br />
+    <div style="width: 270px;border:1px solid #DDDDFF">
+ <div style="background-color: #f3ac03;font-weight: bold;font-size: 1.2em; color: white;height: 24px"><{$lang_login}></div>
+    <br />
+   <form action="<{$xoops_url}>/user.php" method="post">
+   <{$lang_username}><input type="text" name="uname" size="21" maxlength="25" value="" /><br />
+    <div>
+    <{$lang_password}><input type="password" name="pass" size="21" maxlength="32" /><br />
+        	<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+        	<input type="hidden" name="xoops_login" value="1" />
+        <br />
+        	<input type="submit" value="<{$lang_login}>" />
+</div> 
+ </form>
+<br />
+</div>
+</center>
+<br />
+<div id="footer">
+
+		<div class="left">
+			<{$xoops_footer}>
+		</div>
+		<div class="right">
+			Ported by <a href="http://www.xoops-theme.com">xoops-theme.com</a> | <a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a> 
+		</div>
+		
+		<div class="clearer">&nbsp;</div>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+    
+</body>
+</html>

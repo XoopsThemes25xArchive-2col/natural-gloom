@@ -1,0 +1,7 @@
+<ul>
+<{foreach item=comment from=$block.comments}>
+  <li>
+    <{$comment.title}> | <{$comment.module}> | <{$comment.poster}>
+  </li>
+<{/foreach}>
+</ul>

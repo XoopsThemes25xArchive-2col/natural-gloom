@@ -1,0 +1,6 @@
+Version: 1
+
+www.xoops-theme.com
+www.bleekk.com
+
+This theme is under the CC licence!!

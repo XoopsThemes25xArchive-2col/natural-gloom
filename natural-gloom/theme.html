@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<{$xoops_langcode}>" xml:lang="<{$xoops_langcode}>">
+<head>
+<!-- Center block custom positioning -->
+	<{* Center blocks display order
+		valid values are:  lrc (left right / center) lcr (left center right) clr (center / left right)
+	*}>
+	<{assign var=theme_top_order value=lrc}>
+	<{assign var=theme_bottom_order value=lcr}>
+	
+<!-- Theme name -->
+	<{assign var=theme_name value=$xoTheme->folderName}>
+
+<!-- Title and meta -->
+	<title><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> : <{/if}><{$xoops_sitename}></title>
+	<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />	
+	<meta name="robots" content="<{$xoops_meta_robots}>" />
+	<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+	<meta name="description" content="<{$xoops_meta_description}>" />
+	<meta name="rating" content="<{$xoops_meta_rating}>" />
+	<meta name="author" content="<{$xoops_meta_author}>" />
+	<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+	<meta name="generator" content="ImpressCMS" />
+	
+<!-- Favicon -->
+	<link rel="shortcut icon" type="image/ico" href="<{xoImgUrl icons/favicon.ico}>" />
+	<link rel="icon" type="image/png" href="<{xoImgUrl icons/icon.png}>" />
+	
+<!-- Sheet Css -->
+	<link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoAppUrl xoops.css}>" />
+	<link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl style.css}>" />
+	<link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl layout.css}>" />
+    <link rel="stylesheet" type="text/css" media="all" title="Style sheet" href="<{xoImgUrl style.css}>" />
+    
+    <!-- Module Header -->
+    <{$xoops_module_header}>
+   
+</head>
+
+<body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
+
+<!-- controling the canvas column-layout -->
+<{if $xoBlocks.canvas_left and !$xoBlocks.canvas_right}>
+<{assign var=columns_layout value='leftcolumn-layout'}>
+
+<{elseif !$xoBlocks.canvas_left and $xoBlocks.canvas_right}>
+<{assign var=columns_layout value='rightcolumn-layout'}>
+
+
+<{elseif !$xoBlocks.canvas_right and !$xoBlocks.canvas_left}>
+<{assign var=columns_layout value='nocolumn-layout'}>
+<{/if}>
+<!-- end canvas column-layout -->
+
+<!-- controling the stylesheet for the bottom blocks -->
+<{if ($xoBlocks.bottomleft and $xoBlocks.bottomcenter and !$xoBlocks.bottomright) || ($xoBlocks.bottomleft and !$xoBlocks.bottomcenter and $xoBlocks.bottomright) || (!$xoBlocks.bottomleft and $xoBlocks.bottomcenter and $xoBlocks.bottomright)}>
+    <{assign var=bottomcolumns_layout value='twocolumn-layout'}>
+  
+    <{elseif ($xoBlocks.bottomleft and !$xoBlocks.bottomcenter and !$xoBlocks.bottomright) || (!$xoBlocks.bottomleft and $xoBlocks.bottomcenter and !$xoBlocks.bottomright) || (!$xoBlocks.bottomleft and !$xoBlocks.bottomcenter and $xoBlocks.bottomright )}>
+    <{assign var=bottomcolumns_layout value='onecolumn-layout'}>
+    
+    <{elseif $xoBlocks.bottomleft and $xoBlocks.bottomcenter and $xoBlocks.bottomright}>
+    <{assign var=bottomcolumns_layout value='threecolumn-layout'}>
+  
+<{/if}>
+<!-- end control of bottom blocks -->
+
+<!-- Starting theme -->
+
+<div id="layout_wrapper">
+<div id="layout_wrapper2">
+<div id="layout_wrapper3">
+<div id="layout_wrapper4">
+
+<!-- HEADER -->
+<div id="header_wrapper">
+		<div id="header">
+		
+			<div id="site_title">
+				<h1><a href="<{xoAppUrl}>"><{$xoops_sitename}></a></h1>
+				<h2><{$xoops_slogan}></h2>
+			</div>
+
+		</div>
+	</div>
+<!-- end display HEADER -->
+
+<!-- TOP MENU -->
+<div id="navigation">
+
+		<div id="nav">
+
+			<ul class="tabbed">
+				<li class="current_page_item"><a href="#">Home</a></li>
+				<li><a href="#">Blog Post</a></li>
+				<li><a href="#">Style Demo</a></li>
+				<li><a href="#">Archives</a></li>
+				<li><a href="#">Empty Page</a></li>
+			</ul>
+
+			<div class="clearer">&nbsp;</div>
+
+		</div>
+
+		<div id="subnav">
+
+			<ul class="tabbed">
+				<li class="current_page_item"><a href="#">First subpage</a></li>
+				<li><a href="#">Second subpage</a></li>
+				<li><a href="#">Third subpage</a></li>
+				<li><a href="#">And so on..</a></li>
+			</ul>
+
+			<div class="clearer">&nbsp;</div>
+
+		</div>
+
+	</div>
+<!-- END TOP MENU with search -->
+
+<div id="xo-canvas">
+<div id="main-xo-canvas">
+
+	<!-- Content -->
+  
+	<div id="xo-canvas-content">
+		<div id="xo-canvas-columns">
+			<!-- Left column -->
+			
+			<!-- Center column / page -->
+			<div id="xo-page">
+				<!-- Top blocks -->
+				<{if $xoBlocks.page_topleft or $xoBlocks.page_topcenter or $xoBlocks.page_topright}>
+				<div class="xo-blockszone xo-<{$theme_top_order}>pageblocks" id="xo-page-topblocks">
+					<{includeq file="$theme_name/centerblocks.html" topbottom=top lcr=$theme_top_order|substr:0:1}>
+					<{includeq file="$theme_name/centerblocks.html" topbottom=top lcr=$theme_top_order|substr:1:1}>
+					<{includeq file="$theme_name/centerblocks.html" topbottom=top lcr=$theme_top_order|substr:2:1}>
+				</div>
+				<{/if}>
+				<!-- Module content -->
+				<{if $xoops_contents}>
+				<div id="xo-content"><{$xoops_contents}></div>
+				<{/if}>
+				<!-- Bottom blocks -->
+				<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomcenter or $xoBlocks.page_bottomright}>
+				<div class="xo-blockszone xo-<{$theme_bottom_order}>pageblocks" id="xo-page-bottomblocks">
+					<{includeq file="$theme_name/centerblocks.html" topbottom=bottom lcr=$theme_bottom_order|substr:0:1}>
+					<{includeq file="$theme_name/centerblocks.html" topbottom=bottom lcr=$theme_bottom_order|substr:1:1}>
+					<{includeq file="$theme_name/centerblocks.html" topbottom=bottom lcr=$theme_bottom_order|substr:2:1}>
+				</div>
+				<{/if}>
+			</div>
+			<!-- Right column -->
+			<{if $xoBlocks.canvas_right || $xoBlocks.canvas_left}>
+			<{includeq file="$theme_name/blockszone.html" blocks=$xoBlocks.canvas_right
+				zoneClass='xo-canvas-column' zoneId='xo-canvas-rightcolumn'}>
+            <{includeq file="$theme_name/blockszone.html" blocks=$xoBlocks.canvas_left
+				zoneClass='xo-canvas-column' zoneId='xo-canvas-rightcolumn'
+			}>
+			<{/if}>
+		</div>
+	</div>
+    
+    <div style="clear:both"></div>
+    
+</div>
+</div>
+<{if $xoBlocks.bottomleft or $xoBlocks.bottomcenter or $xoBlocks.bottomright}>
+<div id="dashboard_outer">
+	<div id="dashboard">
+		<{if $xoBlocks.bottomleft}>
+        <div class="col3 left <{$bottomcolumns_layout}>">
+			<div class="col3_content">
+            	<{if $xoBlocks.bottomleft}>
+        			<{foreach from=$xoBlocks.bottomleft item=block}>
+                   		<{includeq file="$theme_name/footer-left-center-right.html"}>
+                   	<{/foreach}>
+   				<{/if}>
+            </div>
+		</div>
+		<{/if}>
+		<div class="col3mid left <{$bottomcolumns_layout}>">
+			<div class="col3_content">
+            	<{if $xoBlocks.bottomcenter}>
+           			<{foreach from=$xoBlocks.bottomcenter item=block}>
+                  		<{includeq file="$theme_name/footer-left-center-right.html"}>
+           			<{/foreach}>
+   				<{/if}>
+			</div>
+		</div>
+
+		<div class="col3right right <{$bottomcolumns_layout}>">
+			<div class="col3_content">
+				<{if $xoBlocks.bottomright}>
+        		<{foreach from=$xoBlocks.bottomright item=block}>
+           			<{includeq file="$theme_name/footer-left-center-right.html"}>
+        		<{/foreach}>
+   				<{/if}>
+			</div>
+		</div>
+
+		<div class="clearer">&nbsp;</div>
+
+	</div>
+</div>
+<{/if}>
+<div id="footer">
+
+		<div class="left">
+			<{$xoops_footer}>
+		</div>
+		<div class="right">
+			Ported by <a href="http://www.xoops-theme.com">xoops-theme.com</a> | <a href="http://templates.arcsin.se/">Website template</a> by <a href="http://arcsin.se/">Arcsin</a> 
+		</div>
+		
+		<div class="clearer">&nbsp;</div>
+
+</div>
+
+<!-- BOTTOM BLOCKS, possible variations: one, two or three columns -->    
+<!-- END BOTTOM BLOCKS -->
+
+</div>
+</div>
+</div>
+</div>
+
+
+    
+</body>
+</html>

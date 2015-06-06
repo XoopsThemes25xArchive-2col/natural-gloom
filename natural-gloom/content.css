@@ -1,0 +1,84 @@
+/* Start Main Menu */
+#mainmenu {	font-size: 1em; padding-left: 5px; padding-right: 6px;}
+#mainmenu a {
+	margin: 0;
+	padding:0;
+	line-height: 2em; 
+	text-decoration: none; 
+	color: #666; 
+	font-weight: normal; 
+	background: transparent;
+	border-bottom:1px solid #aeb9c1; 
+	display:block;
+	}
+#mainmenu a:hover {  color: #2286B3;}
+#mainmenu a.menuTop {padding-left:18px;}
+#mainmenu a.menuMain {padding-left:18px;}
+#mainmenu a.menuSub {padding-left: 25px; background-color: #eaebec; color: #666; }
+#mainmenu a.menuSub:hover {color: #2286B3;}
+/* End Main Menu */
+
+/* Start User Menu */
+#usermenu {	font-size: .8em;}
+#usermenu a {line-height: 18px; padding: 0 0 0 18px; text-decoration: none; color: #666; font-weight: normal; font-size: 11px; 
+			background: transparent;  margin-left:10px; height: 18px; display:block;}
+#usermenu a:hover {color: #2286B3;}
+#usermenu a.menuTop {}
+#usermenu a.highlight {background-color: #fcc; color: #ff0000;}
+/* End User Menu */
+
+/* tables and cells */
+table {	width: 100%;}
+table td {padding: 0; border-width: 0;	vertical-align: top;}
+th, thead { background-color:#4e4e4e; color:#eeeeee; border:1px solid #AAAAAA; padding:2px; vertical-align:middle; }
+.head { background-color:#d7e0e9; color:inherit;   padding:2px; font-weight:bold; }
+.even { background-color:#e8e8e8; color:inherit;  padding:2px; }
+.odd { background-color: #e0e2e4; color:inherit;  padding:2px; }
+.foot, tfoot { background-color: #eeeeee; color:inherit; padding: 2px; font-weight: bold; }
+
+tr.head td { background: #d2d5d8;  border:1px solid #adb9c2; color:inherit; font-weight:bold; padding:2px;}
+tr.even td { background-color: #e8e8e8; color:inherit; border: 1px solid #CCCCCC; padding:2px; }
+tr.odd td { background-color: #e0e2e4; color:inherit; border: 1px solid #CCCCCC; padding:2px; }
+tr.foot td { background-color: #eeeeee; color:inherit;  padding: 2px; font-weight: bold; }
+
+/* core messages */
+.errorMsg { background-color: #FFCCCC;  color:inherit; text-align: center; border-top: 1px solid #DDDDFF; border-left: 1px solid #DDDDFF; border-right: 1px solid #aaa; border-bottom: 1px solid #aaa;font-weight: bold; padding: 10px;}
+.confirmMsg { background-color: #DDFFDF; color: #136C99; text-align: center; border-top: 1px solid #DDDDFF; border-left: 1px solid #DDDDFF; border-right: 1px solid #aaa; border-bottom: 1px solid #aaa;font-weight: bold; padding: 10px;}
+.resultMsg { background-color : #bbb; color: #333; text-align: center; border-top: 1px solid #ccc; border-left: 1px solid #ccc; font-weight: bold; border-right: 1px solid #666; border-bottom: 1px solid #666; padding: 10px;}
+
+/* codes and quotes */
+.xoopsCode { background-color: #fff; border: 1px inset #000080; font-size: 1.1em !important; 
+font-family: "Courier New"; font-style:normal; padding: 0 6px 6px 6px; max-height: 250px; overflow: auto;}
+.xoopsQuote { background-color: #fff; color:inherit; border: 1px inset #000080; font-size: 1.1em; font-family: "Courier New",Courier,monospace;  padding: 0 6px 6px 6px;}
+
+/* articles */
+.item {border-bottom:1px solid #bbb;}
+.itemHead {padding: 3px; background-color: #f3f3f3; color: #000; font-size: 1.1em;}
+.itemInfo {background: #E7E7E7; border: 1px solid #D7D7D7; color: #777; font-size: 0.9em; padding: 6px 10px;}
+.itemTitle a {text-decoration: none;}
+.itemTitle a:hover{text-decoration: underline;}
+.itemPoster {font-size: .9em; font-style:italic;}
+.itemPostDate {font-size: .9em; font-style:italic;}
+.itemStats {font-size: .9em; font-style:italic;}
+.itemBody {padding-left: 5px;}
+.itemText {margin-top: 5px; margin-bottom: 5px; line-height: 1.5em;}
+.itemText:first-letter {font-size: 1.3em; font-weight: bold;}
+.itemFoot {text-align: right; padding: 3px; background-color: #f3f3f3; color:inherit;}
+.itemAdminLink {font-size: .9em;}
+.itemPermaLink {font-size: .9em;}
+
+/* forums */
+.comTitle { font-weight: bold; margin-bottom: 2px;}
+.comText {padding: 2px;}
+.comUserStat {font-size: .7em; color: #639ACE; font-weight:bold; border: 1px solid #ccc; background-color: #fff; margin: 2px; padding: 2px;}
+.comUserStatCaption {font-weight: normal;}
+.comUserStatus {margin-left: 2px; margin-top: 10px; background-color: inherit; color: #639ACE; font-weight:bold; font-size: .8em;}
+.comUserRank {margin: 2px;}
+.comUserRankText {font-size: .8em; font-weight:bold;}
+.comUserRankImg {border: 0;}
+.comUserName {}
+.comUserImg {margin: 2px;}
+.comDate {font-weight: normal; font-style: italic; font-size: .8em}
+.comDateCaption {font-weight: bold; font-style: normal; font-size: .8em}
+.signature { font-size:.8em; font-style:italic;}
+
